@@ -65,6 +65,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element(By.NAME, 'josso_username').send_keys('joao.pro')
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -73,6 +74,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element(By.NAME, 'josso_password').send_keys('Joao123@')
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -81,6 +83,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element(By.CLASS_NAME, "botao").click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -89,6 +92,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="geral"]/div[2]/ul/li[2]/a').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -98,6 +102,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="geral"]/div[2]/ul/li[2]/ul/li[2]/a').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -108,6 +113,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="novo"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -138,6 +144,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="mestre-nome"]').send_keys(nome)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
         time.sleep(3)
 
@@ -148,6 +155,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="mestre-titularidade"]/option[4]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
         time.sleep(3)
 
@@ -158,6 +166,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="mestre-tipo_unidade"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         time.sleep(5)
@@ -169,6 +178,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="mestre-tipo_unidade"]').send_keys(tipo)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
         time.sleep(5)
 
@@ -178,6 +188,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="aba-endereco"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         time.sleep(5)
@@ -189,6 +200,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="novo"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -198,6 +210,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="detalhe-1-vinculado"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         time.sleep(2)
@@ -210,6 +223,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.switch_to.frame(0)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         try:
@@ -217,6 +231,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element(By.XPATH, '//*[@id="logradouro"]').send_keys(nomeLog)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         try:
@@ -224,6 +239,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="bairro"]').send_keys(bairro)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         try:
@@ -231,6 +247,7 @@ while ( pontoDeParadaWhile != 140 ):
             numlog = int(numlog)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -239,6 +256,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="numeroInicial"]').send_keys(numlog) #numlog
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         try:
@@ -246,6 +264,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="numeroFinal"]').clear()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         try:
@@ -253,6 +272,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="numeroFinal"]').send_keys(numlog)
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         try:
@@ -260,6 +280,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="pesquisar"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 
@@ -270,12 +291,12 @@ while ( pontoDeParadaWhile != 140 ):
          # Verifique se o tipo de equipamento está no dicionário de mapeamento
             if tipo in mapeamento_valores:
                 valor_para_preencher = mapeamento_valores[tipo]
-
-              # Localize o campo apropriado no site (substitua o XPath correto)
+               #Localize o campo apropriado no site (substitua o XPath correto)
                 campo_input = navegador.find_element('xpath', '//*[@id="mestre-tipo_unidade"]')
                 campo_input.send_keys(valor_para_preencher)
         except:
               print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+              pontoDeParadaWhile = pontoDeParadaWhile - 1
               break
 
         time.sleep(3)
@@ -284,6 +305,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '//*[@id="conteudo"]/table/tbody/tr[2]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         time.sleep(3)
@@ -293,6 +315,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.switch_to.default_content()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         time.sleep(5)
@@ -301,6 +324,7 @@ while ( pontoDeParadaWhile != 140 ):
             navegador.find_element('xpath', '// *[ @ id = "detalhe-1-principal"]').click()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
         time.sleep(3)
@@ -312,32 +336,28 @@ while ( pontoDeParadaWhile != 140 ):
             # --------RASPAGEM DE DADOS ---------------------
             time.sleep(5)
             site = BeautifulSoup(navegador.page_source, "html.parser")
-            print(site.prettify())
-            print('----------------------------------------------------')
-            print(' --------------  INICIO DA TAG P -------------------')
             buscador = site.find_all("p")
-            print(buscador)
-            print('-----------------------------')
-            print('Conteúdo do P')
-            print(buscador[1])
             unidadesCadastradas = buscador[1]
             ListaUnidade.append(unidadesCadastradas)
-
-        #------------------------------------------------
+            #------------------------------------------------
 
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
-        time.sleep(1000)
+        time.sleep(3)
 
         try:
             navegador.quit()
         except:
             print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
+            pontoDeParadaWhile = pontoDeParadaWhile - 1
             break
 
 for unidade in ListaUnidade:
     print(unidade)
+
+print("Total Analisados", len(unidade) )
 
 
