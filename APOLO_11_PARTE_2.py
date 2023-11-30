@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import time
 
 
-# Leitura do arquivo Excel e criação do DataFrame
+# Leitura do arquivo Excel e criação do DataFrame 
 diretorio = 'C:/Users/pres00310855/Desktop/Integracao/Equipamentos_SMEL.xlsx'
 armazenador = pd.read_excel(diretorio)
 data_frame = pd.DataFrame(armazenador)
