@@ -43,7 +43,7 @@ unidadesCadastradas = 0
 ListaUnidade = []
 
 #CASO OCORRA ALGUMA QUEBRA O ALGORITIMO RETOMA A CONTAGEM INICIANDO NO ULTIMO PONTO DE PARADA WHILE
-pontoDeParadaWhile = 0
+pontoDeParadaWhile = 37
 
 
 # ENQUANTO O PONTO DE PARA FOR DIFERENTE DE 2030, CONTINUE TENTANDO REALIZAR O CADASTRO
@@ -55,7 +55,7 @@ while ( pontoDeParadaWhile != 140 ):
     for x in range(pontoDeParadaWhile,140):
 
         # INDICADOR DE QUEBRA MOSTRANDO ONDE QUEBROU E ONDE DEVE RETORNAR:
-        print( "Estamos cadastrando a unidade:", pontoDeParadaWhile + "º ao quebrar retorne a partir do: ", pontoDeParadaWhile)
+        print( "Estamos cadastrando a unidade:", pontoDeParadaWhile , "ao quebrar retorne a partir do: ", pontoDeParadaWhile)
 
         # PEGANDO OS DADOS DO DATA FRAME
         valorLinha = pontoDeParadaWhile
@@ -297,6 +297,7 @@ while ( pontoDeParadaWhile != 140 ):
             buscador = site.find_all("p")
             unidadesCadastradas = buscador[1]
             ListaUnidade.append(unidadesCadastradas)
+            print(unidadesCadastradas)
             #------------------------------------------------
 
         except:
