@@ -1,3 +1,3 @@
 # APLO_XI
-Automatização utilizando a linguagem python para realizar o cadastramento de Unidades informando o logradouro, tipo e unidade dentre ouutros dados. 
+Automatização utilizando a linguagem python para realizar o cadastramento de Unidades informando o logradouro, tipo e unidade dentre outros dados. 
 Créditos: João Paulo Rodrigues de Oliveira -  Gestão de Custos 2023
