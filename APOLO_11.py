@@ -17,25 +17,6 @@ mapeamento_valores = {
     'Centro de Referênciay': '55',
     'Conselho Municipal de Assistência Social': '70',
     'Conselho Tutelar': '56',
-    'Feira Coberta': '58',
-    'Mercado Distrital': '59',
-    'Núcleo de Atendimento às Medidas Socioeducativas e Protetivas': '60',
-    'Plantão do Conselho': '61',
-    'Refeitório Popular': '62',
-    'Restaurante Popular': '73',
-    'Abrigo': '74',
-    'Albergue': '75',
-    'Banheiro Público': '69',
-    'Centro de Apoio Comunitário': '68',
-    'Ciame': '66',
-    'Horta Comunitária': '67',
-    'República': '63',
-    'Unidade de Acolhimento Infantil': '64',
-    'Unidade de Acolhimento Institucional': '65'
-}
-
-# CRIACAO DE UMA VARIAVEL PARA CONTAR QUANTAS UNIDADES FORAM VINCULADAS
-cadastrados = 0
 
 # CRIACAO DE UMA VARIAVEL PARA CONTAR QUANTAS UNIDADES NÃO FORAM VINCULADAS
 naoCadastrados = 0
@@ -100,14 +81,7 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
 
-            try:
-                # CLICAR NA OPCAO NOVA UNIDADE
-                navegador.find_element('xpath', '//*[@id="novo"]').click()
-            except:
-                print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
-                break
-
-            # -------------------------------------------------------------------------
+        # -------------------------------------------------------------------------
             # PEGANDO OS DADOS DO DATA FRAME
             valorLinha = pontoDeParadaWhile
 
@@ -129,7 +103,7 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # INSERIR A UNIDADE NO CAMPO NOME UNIDADE
-                navegador.find_element('xpath', '//*[@id="mestre-nome"]').send_keys(nome)
+                navegador.find_element('xpath', '//*/[@id="mestre-nome"]').send_keys(nome)
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -137,7 +111,7 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # CLICAR NA OPCAO TITULARIDADE
-                navegador.find_element('xpath', '//*[@id="mestre-titularidade"]/option[4]').click()
+                navegador.find_element('xpath', '//*/[@id="mestre-titularidade"]/option[4]').click()
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -145,7 +119,7 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # CLICAR NA OPCAO TIPO DE UNIDADE
-                navegador.find_element('xpath', '//*[@id="mestre-tipo_unidade"]').click()
+                navegador.find_element('xpath', '//*/[@id="mestre-tipo_unidade"]').click()
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -154,7 +128,7 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # INSERIR O TIPO DE UNIDADE
-                navegador.find_element('xpath', '//*[@id="mestre-tipo_unidade"]').send_keys(tipo)
+                navegador.find_element('xpath', '//*/[@id="mestre-tipo_unidade"]').send_keys(tipo)
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -162,7 +136,7 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # CLICAR NA OPCAO LOGRADOURO
-                navegador.find_element('xpath', '//*[@id="aba-endereco"]').click()
+                navegador.find_element('xpath', '//*/[@id="aba-endereco"]').click()
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -171,14 +145,14 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # CLICAR NO BOTAO NOVA UNIDADE
-                navegador.find_element('xpath', '//*[@id="novo"]').click()
+                navegador.find_element('xpath', '//*/[@id="novo"]').click()
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
 
             try:
                 # CLICANDO NO BOTAO PARA CADASTRAR NOVA UNIDADE
-                navegador.find_element('xpath', '//*[@id="detalhe-1-vinculado"]').click()
+                navegador.find_element('xpath', '//*/[@id="detalhe-1-vinculado"]').click()
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -194,18 +168,18 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
                 if log == tipoLogradouro:
                     # ISERINDO O TIPO DE LOGRADOURO "RUA"
                     # Seleciona a opção RUA
-                    navegador_II = navegador.find_element(By.ID, 'tipoLogradouro')
+                    navegador_II = navegador.find_element(By.ID, 'tipo_Logradouro')
                     time.sleep(2)
                     seletor = Select(navegador_II)
                     seletor.select_by_value('RUA')
                     navegador.find_element(By.XPATH, '//*[@id="logradouro"]').send_keys(nomeLog)
                 else:
                     # ISERINDO O TIPO DE LOGRADOURO AVENIDA
-                    navegador_II = navegador.find_element(By.ID, 'tipoLogradouro')
+                    navegador_II = navegador.find_element(By.ID, 'tipo_Logradouro')
                     time.sleep(2)
                     seletor = Select(navegador_II)
                     seletor.select_by_value('AVE')
-                    navegador.find_element(By.XPATH, '//*[@id="logradouro"]').send_keys(nomeLog)
+                    navegador.find_element(By.XPATH, '//*[@id="logradouro"]').send_keys(nome_Log)
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
@@ -219,14 +193,14 @@ while (pontoDeParadaWhile != 83):  # A planilha inicia na linha 2, temos um tota
 
             try:
                 # INSERINDO O NUMERO INICIAL DO LOGRADOURO NO IFRAME
-                navegador.find_element('xpath', '//*[@id="numeroInicial"]').send_keys(numlog)
+                navegador.find_element('xpath', '//*/[@id="numeroInicial"]').send_keys(numlog)
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
 
             try:
                 # PRENCHENDO O NUMERO FINAL NO IFRAME
-                navegador.find_element('xpath', '//*[@id="numeroFinal"]').send_keys(numlog)
+                navegador.find_element('xpath', '//*/[@id="numeroFinal"]').send_keys(numlog)
             except:
                 print("houve uma quebra nesse ponto: ", pontoDeParadaWhile)
                 break
